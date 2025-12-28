@@ -3,19 +3,19 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const testimonials = [
   {
-    content: "Alex is an exceptional developer who delivers high-quality work consistently. His attention to detail and problem-solving skills are outstanding.",
+    content: "Isaac is an exceptional developer who delivers high-quality work consistently. His attention to detail and problem-solving skills are outstanding.",
     author: "Sarah Johnson",
     role: "CTO, TechStartup",
     avatar: "👩‍💼",
   },
   {
-    content: "Working with Alex was a game-changer for our project. He brought innovative solutions and exceeded our expectations at every turn.",
+    content: "Working with Isaac was a game-changer for our project. He brought innovative solutions and exceeded our expectations at every turn.",
     author: "Michael Chen",
     role: "Product Manager, InnovateCo",
     avatar: "👨‍💻",
   },
   {
-    content: "Alex's expertise in full-stack development helped us launch our product 3 months ahead of schedule. Highly recommended!",
+    content: "Isaac's expertise in full-stack development helped us launch our product 3 months ahead of schedule. Highly recommended!",
     author: "Emily Rodriguez",
     role: "Founder, AppVenture",
     avatar: "👩‍🚀",

@@ -49,7 +49,7 @@ export const Navbar = () => {
               handleNavClick('#home');
             }}
           >
-            Portfolio
+            Isaac Kiptoo Kilimo
           </a>
 
           {/* Desktop Navigation */}

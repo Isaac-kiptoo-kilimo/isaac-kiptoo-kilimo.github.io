@@ -5,9 +5,9 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { useToast } from '@/hooks/use-toast';
 
 const contactInfo = [
-  { icon: Mail, label: 'Email', value: 'alex@example.com', href: 'mailto:alex@example.com' },
-  { icon: Phone, label: 'Phone', value: '+1 (555) 123-4567', href: 'tel:+15551234567' },
-  { icon: MapPin, label: 'Location', value: 'San Francisco, CA', href: null },
+  { icon: Mail, label: 'Email', value: 'isaackilimok2@gmail.com', href: 'mailto:isaackilimok2@gmail.com' },
+  { icon: Phone, label: 'Phone', value: '+254 (710) 443-888', href: 'tel:+254710443888' },
+  { icon: MapPin, label: 'Location', value: 'Nairobi,KE , Remote Worldwide',  href: null },
 ];
 
 export const ContactSection = () => {
@@ -54,46 +54,64 @@ export const ContactSection = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Info */}
-            <div className={`${isVisible ? 'animate-slide-in-left delay-200' : 'opacity-0'}`}>
-              <h3 className="font-display text-2xl font-semibold mb-8">Contact Information</h3>
-              
-              <div className="space-y-6 mb-10">
-                {contactInfo.map((info) => (
-                  <div key={info.label} className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center">
-                      <info.icon className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-muted-foreground">{info.label}</p>
-                      {info.href ? (
-                        <a
-                          href={info.href}
-                          className="font-medium hover:text-primary transition-colors duration-200"
-                        >
-                          {info.value}
-                        </a>
-                      ) : (
-                        <p className="font-medium">{info.value}</p>
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="glass-card p-6">
-                <h4 className="font-display font-semibold mb-2">Open for Opportunities</h4>
-                <p className="text-muted-foreground text-sm">
-                  I'm currently available for freelance work and full-time positions. 
-                  If you have a project that needs my expertise, let's talk!
+          {/* Contact Info Cards */}
+          <div className={`grid md:grid-cols-3 gap-6 mb-16 ${isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
+            {contactInfo.map((info, index) => (
+              <div
+                key={info.label}
+                className="glass-card p-8 text-center hover:border-primary/50 transition-all duration-300"
+                style={{ animationDelay: `${200 + index * 100}ms` }}
+              >
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <info.icon className="w-8 h-8 text-primary" />
+                </div>
+                <h4 className="font-display text-xl font-semibold mb-2">{info.label}</h4>
+                <p className="text-sm text-muted-foreground mb-4">
+                  {info.label === 'Email' && 'Drop me a line anytime'}
+                  {info.label === 'Phone' && 'Call me for immediate response'}
+                  {info.label === 'Location' && 'Available for remote work'}
                 </p>
+                {info.href ? (
+                  <a
+                    href={info.href}
+                    className="inline-block px-4 py-2 rounded-lg bg-secondary/50 border border-border/50 font-medium hover:text-primary hover:border-primary/50 transition-all duration-200"
+                  >
+                    {info.value}
+                  </a>
+                ) : (
+                  <p className="font-medium text-foreground">{info.value}</p>
+                )}
               </div>
-            </div>
+            ))}
+          </div>
 
-            {/* Contact Form */}
-            <div className={`${isVisible ? 'animate-slide-in-right delay-300' : 'opacity-0'}`}>
-              <form onSubmit={handleSubmit} className="glass-card p-8">
+          {/* Ready to Start CTA Section */}
+          <div className={`text-center mb-16 py-12 ${isVisible ? 'animate-fade-up delay-300' : 'opacity-0'}`}>
+            <h3 className="font-display text-3xl md:text-4xl font-bold mb-4">Ready to start your project?</h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
+              Whether you need a full-stack web application, DevOps consulting, or just want to discuss your 
+              next big idea, I'm here to help turn your vision into reality.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a href="mailto:isaackilimok2@gmail.com">
+                <Button variant="hero" size="lg" className="gap-2">
+                  <Mail size={18} />
+                  Send Email
+                </Button>
+              </a>
+              <a href="tel:+254710443888">
+                <Button variant="heroOutline" size="lg" className="gap-2">
+                  <Phone size={18} />
+                  Call Now
+                </Button>
+              </a>
+            </div>
+          </div>
+
+          {/* Contact Form */}
+          <div className={`max-w-2xl mx-auto ${isVisible ? 'animate-slide-in-up delay-400' : 'opacity-0'}`}>
+            <h3 className="font-display text-2xl font-semibold mb-8 text-center">Or send me a message</h3>
+            <form onSubmit={handleSubmit} className="glass-card p-8">
                 <div className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-2">
@@ -159,7 +177,6 @@ export const ContactSection = () => {
                 </div>
               </form>
             </div>
-          </div>
         </div>
       </div>
     </section>

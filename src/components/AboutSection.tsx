@@ -2,10 +2,10 @@ import { Code2, Coffee, Rocket, Users } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const stats = [
-  { icon: Code2, value: '50+', label: 'Projects Completed' },
-  { icon: Users, value: '30+', label: 'Happy Clients' },
-  { icon: Coffee, value: '1000+', label: 'Cups of Coffee' },
-  { icon: Rocket, value: '5+', label: 'Years Experience' },
+  { icon: Code2, value: '40+', label: 'Projects Completed' },
+  { icon: Users, value: 'Global', label: 'Remote Worldwide' },
+  { icon: Coffee, value: '4+', label: 'Years Experience' },
+  { icon: Rocket, value: 'Full Stack', label: 'Engineer' },
 ];
 
 export const AboutSection = () => {
@@ -51,23 +51,23 @@ export const AboutSection = () => {
             {/* Content */}
             <div className={`${isVisible ? 'animate-slide-in-right delay-300' : 'opacity-0'}`}>
               <h3 className="font-display text-2xl font-semibold mb-6">
-                A Developer with a Passion for Excellence
+                Full-Stack Engineer Based in Kenya
               </h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  I'm a full-stack developer based in San Francisco with over 5 years of 
-                  experience building web applications. I specialize in creating scalable, 
-                  performant, and user-friendly solutions.
+                  I'm a full-stack software engineer based in Kenya with 4+ years of 
+                  hands-on experience designing and delivering secure, scalable web applications 
+                  for global clients. Available for remote work worldwide.
                 </p>
                 <p>
-                  My journey in tech started with a curiosity about how things work on the 
-                  internet. Today, I help startups and enterprises bring their ideas to life 
-                  through clean code and thoughtful design.
+                  My expertise spans Node.js, React, cloud architecture, and modern DevOps practices. 
+                  I specialize in building production-ready systems with a focus on performance, 
+                  reliability, and maintainability.
                 </p>
                 <p>
-                  When I'm not coding, you'll find me exploring new technologies, contributing 
-                  to open-source projects, or enjoying a good cup of coffee while reading 
-                  about the latest in tech.
+                  I'm passionate about solving complex problems, mentoring teams, and staying current 
+                  with emerging technologies. When I'm not coding, you'll find me exploring new tech, 
+                  contributing to open-source, or enjoying adventure travels.
                 </p>
               </div>
             </div>

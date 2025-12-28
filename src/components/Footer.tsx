@@ -1,8 +1,8 @@
 import { Github, Linkedin, Twitter, Heart } from 'lucide-react';
 
 const socialLinks = [
-  { icon: Github, href: 'https://github.com', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
+  { icon: Github, href: 'https://github.com/Isaac-kiptoo-kilimo', label: 'GitHub' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/isaac-kiptoo-kilimo/', label: 'LinkedIn' },
   { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
 ];
 
@@ -30,7 +30,7 @@ export const Footer = () => {
             {/* Brand */}
             <div>
               <h3 className="font-display text-xl font-bold gradient-text mb-4">
-                Alex Morgan
+                Isaac Kilimo
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 Full Stack Developer passionate about creating exceptional digital experiences 
@@ -81,10 +81,7 @@ export const Footer = () => {
           {/* Bottom */}
           <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">
-              © {currentYear} Alex Morgan. All rights reserved.
-            </p>
-            <p className="text-sm text-muted-foreground flex items-center gap-1">
-              Made with <Heart className="w-4 h-4 text-primary" /> using React & TypeScript
+              © {currentYear} Isaac Kilimo. All rights reserved.
             </p>
           </div>
         </div>
